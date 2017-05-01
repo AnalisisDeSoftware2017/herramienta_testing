@@ -22,7 +22,7 @@ public class InterfazHerramientaTesting extends JFrame {
 	private TratamientoMetodos tMetodos;
 	private JFileChooser selector = new JFileChooser();
 	private JList <String> listNombres = new JList<String>();
-	private JLabel lblCC;
+	//private JLabel lblCC;
 	private JLabel lblCCInforme;
 	private JLabel lblCantidadDeLineas;
 	private JLabel lblCantidadComentarios;
@@ -39,21 +39,21 @@ public class InterfazHerramientaTesting extends JFrame {
 	private JLabel lblFanOutInforme;
 	private String direccionUsuario = System.getProperty("user.home");
 	private JLabel lblPorcentajeDeComentarios;
-	private JLabel lblVolumen;
-	private JLabel lblVolumenInforme= new JLabel("");
+	//private JLabel lblVolumen;
+	//private JLabel lblVolumenInforme= new JLabel("");
 	private JSeparator separator_1;
-	private JLabel lblLongitud;
-	private JLabel lblLongitudInforme;
-	private JLabel lblN1;
-	private JLabel lblN1Infome;
-	private JLabel lblN2;
-	private JLabel lblN2Informe;
-	private JLabel lbl_n1;
-	private JLabel lbl_n2;
-	private JLabel lbl_n1Informe;
-	private JLabel lbl_n2Informe;
+	//private JLabel lblLongitud;
+	//private JLabel lblLongitudInforme;
+	//private JLabel lblN1;
+	//private JLabel lblN1Infome;
+//	private JLabel lblN2;
+	//private JLabel lblN2Informe;
+	//private JLabel lbl_n1;
+	//private JLabel lbl_n2;
+	//private JLabel lbl_n1Informe;
+	//private JLabel lbl_n2Informe;
 	private JLabel lblInformePorcentajeComentarios = new JLabel("");
-	private JLabel lblMtodoDeMc;
+	//private JLabel lblMtodoDeMc;
 	public InterfazHerramientaTesting() {
 		setResizable(false);
 		selector.setDialogTitle("Seleccionar c�digo fuente");
@@ -96,15 +96,15 @@ public class InterfazHerramientaTesting extends JFrame {
 		btnCalcular.setEnabled(false);
 		btnCalcular.setBounds(343, 36, 145, 23);
 		contentPaneTesting.add(btnCalcular);
-		lblCC = new JLabel("Complejidad Ciclomatica:");
-		lblCC.setBounds(10, 87, 165, 14);
+		//lblCC = new JLabel("Complejidad Ciclomatica:");
+		//lblCC.setBounds(10, 87, 165, 14);
 		lblCantidadComentarios= new JLabel("Cantidad de Comentarios:");
 		lblCantidadComentarios.setBounds(10, 220, 150, 14);
 		lblCantidadComentariosInforme = new JLabel("");
 		lblCantidadComentariosInforme.setBounds(170, 220, 43, 14);
 		contentPaneTesting.add(lblCantidadComentarios);
 		contentPaneTesting.add(lblCantidadComentariosInforme);
-		contentPaneTesting.add(lblCC);
+		//contentPaneTesting.add(lblCC);
 		lblCCInforme = new JLabel("");
 		lblCCInforme.setBounds(159, 87, 38, 14);
 		contentPaneTesting.add(lblCCInforme);
@@ -114,51 +114,51 @@ public class InterfazHerramientaTesting extends JFrame {
 		panel.setLayout(null);
 		listNombres.setBounds(0, 0, 381, 213);
 		panel.add(listNombres);
-		lblLongitud = new JLabel("Longitud:");
+		/**lblLongitud = new JLabel("Longitud:");
 		lblLongitud.setBounds(222, 325, 75, 14);
 		contentPaneTesting.add(lblLongitud);
 		
 		lblLongitudInforme = new JLabel("");
 		lblLongitudInforme.setBounds(289, 325, 89, 14);
-		contentPaneTesting.add(lblLongitudInforme);
+		contentPaneTesting.add(lblLongitudInforme);*/
 		
-		lblN1 = new JLabel("Ocurrencia de operadores:");
+		/**lblN1 = new JLabel("Ocurrencia de operadores:");
 		lblN1.setBounds(0, 300, 159, 14);
-		contentPaneTesting.add(lblN1);
+		contentPaneTesting.add(lblN1);*/
 		
-		lblN1Infome = new JLabel("");
+		/**lblN1Infome = new JLabel("");
 		lblN1Infome.setBounds(159, 300, 70, 14);
-		contentPaneTesting.add(lblN1Infome);
-		
+		contentPaneTesting.add(lblN1Infome);*/
+		/**
 		lblN2 = new JLabel("Ocurrencia de operandos:");
 		lblN2.setBounds(222, 300, 156, 14);
-		contentPaneTesting.add(lblN2);
+		contentPaneTesting.add(lblN2);*/
 		
-		lblN2Informe = new JLabel("");
+		/**lblN2Informe = new JLabel("");
 		lblN2Informe.setBounds(388, 300, 51, 14);
-		contentPaneTesting.add(lblN2Informe);
+		contentPaneTesting.add(lblN2Informe);*/
 		
-		lbl_n1 = new JLabel("Operadores \u00FAnicos: ");
+		/**lbl_n1 = new JLabel("Operadores \u00FAnicos: ");
 		lbl_n1.setBounds(450, 300, 124, 14);
-		contentPaneTesting.add(lbl_n1);
+		contentPaneTesting.add(lbl_n1);*/
 		
-		lbl_n2 = new JLabel("Operandos \u00FAnicos:");
+		/**lbl_n2 = new JLabel("Operandos \u00FAnicos:");
 		lbl_n2.setBounds(683, 300, 113, 14);
 		contentPaneTesting.add(lbl_n2);
 		
 		lbl_n1Informe = new JLabel("");
 		lbl_n1Informe.setBounds(584, 300, 62, 14);
-		contentPaneTesting.add(lbl_n1Informe);
+		contentPaneTesting.add(lbl_n1Informe);*/
 		
-		lbl_n2Informe = new JLabel("");
+		/**lbl_n2Informe = new JLabel("");
 		lbl_n2Informe.setBounds(806, 300, 62, 14);
-		contentPaneTesting.add(lbl_n2Informe);
+		contentPaneTesting.add(lbl_n2Informe);*/
 		listNombres.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent arg0) {
 				String valorSeleccionado=listNombres.getSelectedValue();
 				textAreaDefinicionMetodo.setText("");
 				for (Metodo metodo : tMetodos.getNombres()) {
-					if(valorSeleccionado.equals(metodo.getNombre())){
+					if(valorSeleccionado != null && metodo != null &&valorSeleccionado.equals(metodo.getNombre())){
 						for (int i = 0; i < metodo.getDefinicion().length; i++) {
 							textAreaDefinicionMetodo.setText(textAreaDefinicionMetodo.getText()+"\n"+metodo.getDefinicion()[i]);
 						}
@@ -230,11 +230,11 @@ public class InterfazHerramientaTesting extends JFrame {
 		contentPaneTesting.add(lblPorcentajeDeComentarios);
 		lblInformePorcentajeComentarios.setBounds(382, 220, 75, 14);
 		contentPaneTesting.add(lblInformePorcentajeComentarios);
-		lblVolumen = new JLabel("Volumen:");
+		/**lblVolumen = new JLabel("Volumen:");
 		lblVolumen.setBounds(517, 325, 73, 14);
 		contentPaneTesting.add(lblVolumen);
 		lblVolumenInforme.setBounds(584, 325, 57, 14);
-		contentPaneTesting.add(lblVolumenInforme);
+		contentPaneTesting.add(lblVolumenInforme);*/
 		JSeparator separator3 = new JSeparator();
 		separator3.setBounds(0, 254, 444, 14);
 		contentPaneTesting.add(separator3);
@@ -245,15 +245,16 @@ public class InterfazHerramientaTesting extends JFrame {
 		separator_1.setBounds(0, 112, 444, 45);
 		contentPaneTesting.add(separator_1);
 		
-		JLabel lblMetodoDeHalstead = new JLabel("M\u00C9TODO DE HALSTEAD");
-		lblMetodoDeHalstead.setForeground(Color.BLUE);
+		//JLabel lblMetodoDeHalstead = new JLabel("M\u00C9TODO DE HALSTEAD");
+		/**lblMetodoDeHalstead.setForeground(Color.BLUE);
 		lblMetodoDeHalstead.setBounds(302, 269, 149, 14);
-		contentPaneTesting.add(lblMetodoDeHalstead);
+		contentPaneTesting.add(lblMetodoDeHalstead);*/
 		
-		lblMtodoDeMc = new JLabel("M\u00C9TODO DE MC CABE");
+		/**lblMtodoDeMc = new JLabel("M\u00C9TODO DE MC CABE");
 		lblMtodoDeMc.setForeground(Color.BLUE);
 		lblMtodoDeMc.setBounds(10, 70, 149, 14);
-		contentPaneTesting.add(lblMtodoDeMc);
+		contentPaneTesting.add(lblMtodoDeMc);*/
+		cargarJList(new ArrayList<Metodo>());
 	}
 	public boolean aceptarArchivo(String extension, String nombre) {
         return nombre.toLowerCase().endsWith(extension);
