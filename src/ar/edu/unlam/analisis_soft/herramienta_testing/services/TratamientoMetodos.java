@@ -9,10 +9,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TratamientoMetodos {
+
 	private String pathArchivo;
 	private int cantidadMetodos=0;
 	private static String [] palabrasReservadas={"catch","WindowEvent"};
 	private ArrayList<Metodo> metodos = new ArrayList<>();
+
 	private static String encontrarMetodo(String linea){
 		Pattern regex = Pattern.compile("^[\\t\\s]*(private|public|void)*(?!.*[^a-z]class)[0-9a-zA-Z ]*\\(([a-zA-Z ]|,|\\[|\\])*\\)\\s?[a-zA-Z ]*\\{?$");
 		Matcher m=regex.matcher(linea);
@@ -25,6 +27,7 @@ public class TratamientoMetodos {
 		}
 		return null;
 	}
+
 	private static String encontrarNombreMetodo(String linea){
 		int indice= linea.indexOf("(");
 		String nombre="";
@@ -41,9 +44,11 @@ public class TratamientoMetodos {
 		}
 		return nombre;	
 	}
+
 	public ArrayList<Metodo> getNombres() {
 		return metodos;
 	}
+
 	public TratamientoMetodos(String path) throws IOException {
 		pathArchivo=path;
 		File archivo = new File (path);
@@ -76,6 +81,7 @@ public class TratamientoMetodos {
 		calcularFanOut();
 
 	}
+
 	private void guardarDefinicionDeMetodo(Metodo metodo,int limite) throws IOException{
 		File archivo = new File (pathArchivo);
 		FileReader lector = new FileReader(archivo); 
@@ -100,6 +106,7 @@ public class TratamientoMetodos {
 		metodo.setDefinicion(definicion);		
 		buffer.close();
 	}
+
 	private void calcularCantidadComentarios(){
 		for (Metodo metodo : metodos) {
 		//	System.out.println("Metodo :"+metodo.getNombre()+", CC: "+cc.getComplejidadCiclomatica());
@@ -116,4 +123,5 @@ public class TratamientoMetodos {
 			metodo.setFanOut(FanOut.getInstance().calcularFanOut(metodo, metodos));
 		}
 	}
+
 }
