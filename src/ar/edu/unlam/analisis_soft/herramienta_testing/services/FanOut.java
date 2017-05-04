@@ -7,31 +7,32 @@ import java.util.regex.Pattern;
  * Created by sbogado on 03/05/17.
  */
 public class FanOut {
-private int fanOut=0;
-	public FanOut(Metodo metodo,ArrayList<Metodo> metodos) {
+
+	private static FanOut instance;
+
+	public static FanOut getInstance() {
+		if(instance==null){
+			instance = new FanOut();
+		}
+		return instance;
+	}
+
+	private FanOut(){}
+
+
+
+	public Integer calcularFanOut(Metodo metodo,ArrayList<Metodo> metodos) {
+		Integer fanOut=0;
 		String nuevo;
 		for (Metodo metodoAux : metodos) {
 			for (int j = 0; j < metodoAux.getCantidadLineas(); j++){
 				nuevo=BorrarComillas(metodoAux.getDefinicion()[j], "\"");
-				fanOut+=regexChecker("[^a-z]"+metodo.getNombre()+"\\s*\\(",nuevo);	
+				fanOut+=RegexCheckerService.regexChecker("[^a-z]"+metodo.getNombre()+"\\s*\\(",nuevo);
 			}
 		}
-		fanOut--;	
+		return --fanOut;
 	}
-	public int getfanOut() {
-		return fanOut;
-	}
-	public static int regexChecker(String theRegex, String str2Check){
-	   Pattern checkRegex = Pattern.compile(theRegex);
-	   Matcher regexMatcher = checkRegex.matcher( str2Check );
-	   int cant=0;
-	        while(regexMatcher.find()){
-	            if (regexMatcher.group().length() != 0){
-	                cant++;
-		            }
-		        }
-		        return cant;	
-		    }
+
 	private static String BorrarComillas(String linea, String condicion){
 		int pos1=0;
 		int pos2=0;

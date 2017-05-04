@@ -102,21 +102,18 @@ public class TratamientoMetodos {
 	}
 	private void calcularCantidadComentarios(){
 		for (Metodo metodo : metodos) {
-			Comentario comentario = new Comentario(metodo);
 		//	System.out.println("Metodo :"+metodo.getNombre()+", CC: "+cc.getComplejidadCiclomatica());
-			metodo.setCantComentarios(comentario.getCantComentarios());
+			metodo.setCantComentarios(ComentarioService.getInstance().contarCantidadDeComentarios(metodo));
 		}
 	}
 	private void calcularFanIn(){
 		for (Metodo metodo : metodos) {
-			FanIn fanIn= new FanIn(metodo, metodos);
-			metodo.setFanIn(fanIn.getfanIn());
+			metodo.setFanIn(FanIn.getInstance().calcularFanIn(metodo, metodos));
 		}
 	}
 	private void calcularFanOut(){
 		for (Metodo metodo : metodos) {
-			FanOut fanOut= new FanOut(metodo,metodos);
-			metodo.setFanOut(fanOut.getfanOut());
+			metodo.setFanOut(FanOut.getInstance().calcularFanOut(metodo, metodos));
 		}
 	}
 }
