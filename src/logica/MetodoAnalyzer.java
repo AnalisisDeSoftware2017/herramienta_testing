@@ -62,7 +62,7 @@ public class MetodoAnalyzer {
 
 
 	public double getPorcentaje(){
-		return (double)lineasComentario*100/lineas;
+		return (double)lineasComentario*100/(lineas+lineasComentario);
 	}
 	
 	public String getNombre(){

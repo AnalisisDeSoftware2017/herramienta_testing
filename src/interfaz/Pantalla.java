@@ -29,20 +29,20 @@ public class Pantalla {
 	private JFrame frame;
 	private JTextField tComentarios;
 	private JTextField tPorcentaje;
-	//private JTextField tComplejidad;
+	private JTextField tComplejidad;
 	private JTextField tFanIn;
 	private JTextField tFanOut;
-	//private JTextField tLongitud;
-	//private JTextField tVolumen;
+	private JTextField tLongitud;
+	private JTextField tVolumen;
 	private JTextField tLineas;
 	private JLabel lblNewLabel;
 	private JLabel lblLneasDeCdigo;
 	private JLabel lblPorcentajeDeComentarios;
-	//private JLabel lblComplejidadCiclomtica;
+	private JLabel lblComplejidadCiclomtica;
 	private JLabel lblFanIn;
 	private JLabel lblFanOut;
-	//private JLabel lblHalsteadLongitud;
-	//private JLabel lblHalsteadVolumen;
+	private JLabel lblHalsteadLongitud;
+	private JLabel lblHalsteadVolumen;
 	private JButton btnNewButton;
 	private JScrollPane scrollPane_1;
 	private JLabel lblNewLabel_1;
@@ -97,7 +97,7 @@ public class Pantalla {
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setResizable(false);
-		frame.setTitle("Herramienta de Testing by Grupo 10");
+		frame.setTitle("Herramienta de Testing by Grupo 2");
 		
 		
 		
@@ -138,11 +138,11 @@ public class Pantalla {
 					else
 						tPorcentaje.setText("" + aux+ "%");
 					
-					//tComplejidad.setText(""+ (clase.getMetodo(index).getComplejidad()+1));
+					tComplejidad.setText(""+ (clase.getMetodo(index).getComplejidad()+1));
 					
 					tFanIn.setText(""+ clase.getMetodo(index).getFanin());
 					tFanOut.setText(""+ clase.getMetodo(index).getFanout());
-					/*tLongitud.setText(""+ clase.getMetodo(index).getHalsteadLongitud());
+					tLongitud.setText(""+ clase.getMetodo(index).getHalsteadLongitud());
 					
 					aux = Double.toString(clase.getMetodo(index).getHalsteadVolumen());
 					
@@ -150,7 +150,7 @@ public class Pantalla {
 						tVolumen.setText(""+ aux.substring(0,8));
 					else
 						tVolumen.setText(""+ aux);
-					*/
+					
 					for(String linea: clase.getMetodo(index).getCodigo()){
 						if(linea.length()>0){
 							tCodigo.append("\n"+linea.substring(1));
@@ -229,7 +229,7 @@ public class Pantalla {
 		tPorcentaje.setEditable(false);
 		tPorcentaje.setColumns(10);
 		
-		/**lblComplejidadCiclomtica = new JLabel("Complejidad Ciclom\u00E1tica");
+		lblComplejidadCiclomtica = new JLabel("Complejidad Ciclom\u00E1tica");
 		lblComplejidadCiclomtica.setBounds(224, 139, 155, 14);
 		frame.getContentPane().add(lblComplejidadCiclomtica);
 		lblComplejidadCiclomtica.setHorizontalAlignment(SwingConstants.LEFT);
@@ -239,7 +239,7 @@ public class Pantalla {
 		frame.getContentPane().add(tComplejidad);
 		tComplejidad.setEditable(false);
 		tComplejidad.setColumns(10);
-		*/
+		
 		lblFanIn = new JLabel("Fan In     ");
 		lblFanIn.setBounds(224, 164, 112, 14);
 		frame.getContentPane().add(lblFanIn);
@@ -262,7 +262,7 @@ public class Pantalla {
 		tFanOut.setEditable(false);
 		tFanOut.setColumns(10);
 		
-		/*lblHalsteadLongitud = new JLabel("Halstead Longitud");
+		lblHalsteadLongitud = new JLabel("Halstead Longitud");
 		lblHalsteadLongitud.setBounds(224, 214, 139, 14);
 		frame.getContentPane().add(lblHalsteadLongitud);
 		lblHalsteadLongitud.setHorizontalAlignment(SwingConstants.LEFT);
@@ -282,7 +282,7 @@ public class Pantalla {
 		tVolumen.setBounds(411, 236, 86, 20);
 		frame.getContentPane().add(tVolumen);
 		tVolumen.setEditable(false);
-		tVolumen.setColumns(10);*/
+		tVolumen.setColumns(10);
 		
 		menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
