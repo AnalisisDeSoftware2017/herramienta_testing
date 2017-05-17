@@ -1,0 +1,29 @@
+private void enviarDatos(){
+		try {
+		//defino triangulo
+			triangulo = new Triangulo(
+					Integer.valueOf(this.tf_lado1.getText()),
+					Integer.valueOf(this.tf_lado2.getText()),
+					Integer.valueOf(this.tf_lado3.getText()));
+			
+			if ( triangulo.isValidRange(triangulo.getLado1()) && 
+					triangulo.isValidRange(triangulo.getLado2()) && 
+					triangulo.isValidRange(triangulo.getLado3()) ){  
+				
+				if ( triangulo.isValid() )					
+					mostrarMensaje("El triangulo es " + triangulo.getTipo());					
+				else 
+					mostrarError("Tri\u00e1ngulo inv\u00e1lido. La suma de cualquier combinaci\u00f3n de dos lados no puede ser mayor al restante.");
+			} else {
+				mostrarError("Ingrese valores enteros entre 1 y 9999.");
+				resetFields();
+			}
+			/*
+			*esto es un comment
+			*
+			*/
+		} catch (NumberFormatException ex ){
+			mostrarError("Ingrese solo valores num\u00e9ricos enteros y no nulos.");
+			resetFields();
+		}
+	}

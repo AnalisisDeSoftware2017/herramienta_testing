@@ -1,0 +1,17 @@
+package test;
+
+public class Main {
+//Chau
+/**
+ * A javadoc comment.
+ * @param args
+ */
+public static void main(String[] args) {
+    System.out.println("/* This isn't a comment */");
+    /* This is a comment */
+    //Comment
+    System.out.println("//Not comment");
+}
+//Comment asdasdasdasdasd
+
+}
