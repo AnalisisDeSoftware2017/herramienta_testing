@@ -1,12 +1,12 @@
-package lector;
+package ar.edu.unlam.analisis_soft.grupo2.lector;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.ConstructorDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
-import entidades.Clase;
-import entidades.Metodo;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Clase;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Metodo;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package principal;
+package ar.edu.unlam.analisis_soft.grupo2.principal;
 
 
 import java.awt.EventQueue;
@@ -6,19 +6,19 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import entidades.Clase;
-import entidades.Metodo;
-import interfaz.Consola;
-import interfaz.GUI;
-import lector.LectorJavaParserAvanzado;
-import metricas.Metrica;
-import metricas.ResultadoMetrica;
-import metricas.impl.CantidadComentarios;
-import metricas.impl.CantidadLineas;
-import metricas.impl.ComplejidadCiclomatica;
-import metricas.impl.FanIn;
-import metricas.impl.FanOut;
-import metricas.impl.Halstead;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Clase;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Metodo;
+import ar.edu.unlam.analisis_soft.grupo2.interfaz.Consola;
+import ar.edu.unlam.analisis_soft.grupo2.interfaz.GUI;
+import ar.edu.unlam.analisis_soft.grupo2.lector.LectorJavaParserAvanzado;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.Metrica;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.ResultadoMetrica;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.impl.CantidadComentarios;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.impl.CantidadLineas;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.impl.ComplejidadCiclomatica;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.impl.FanIn;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.impl.FanOut;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.impl.Halstead;
 
 public class HerramientaTesting {
 
@@ -40,7 +40,7 @@ public class HerramientaTesting {
 		} else {
 			try {
 				//Si se pasa un argumento se supone que es el path a analizar 
-				//y se ejecuta en interfaz de consola.
+				//y se ejecuta en ar.edu.unlam.analisis_soft.grupo2.interfaz de consola.
 				File proyecto = new File(args[0]);
 				HerramientaTesting herramienta = new HerramientaTesting(proyecto);
 				new Consola(herramienta).ejecutar();

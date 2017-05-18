@@ -1,23 +1,21 @@
-package interfaz;
+package ar.edu.unlam.analisis_soft.grupo2.interfaz;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
-import java.awt.Image;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
-import ayuda.TextAreaUpdater;
-import entidades.Clase;
-import entidades.Metodo;
-import metricas.ResultadoMetrica;
-import principal.HerramientaTesting;
+import ar.edu.unlam.analisis_soft.grupo2.ayuda.TextAreaUpdater;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Clase;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Metodo;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.ResultadoMetrica;
+import ar.edu.unlam.analisis_soft.grupo2.principal.HerramientaTesting;
 import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -268,7 +266,7 @@ public class GUI extends JFrame {
             		new TextAreaUpdater(txtAreaCodigo, metodoElegido.getCodigo())
         		).start();
             
-            //Aca hay un problema, si cambiamos el orden de resolucion de las metricas esto tambien hay que cambiarlo
+            //Aca hay un problema, si cambiamos el orden de resolucion de las ar.edu.unlam.analisis_soft.grupo2.metricas esto tambien hay que cambiarlo
             
             /**
              * Complejidad Ciclomatica

@@ -1,6 +1,6 @@
-package metricas;
+package ar.edu.unlam.analisis_soft.grupo2.metricas;
 
-import entidades.Nombrable;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Nombrable;
 
 public class ResultadoMetrica implements Nombrable {
 

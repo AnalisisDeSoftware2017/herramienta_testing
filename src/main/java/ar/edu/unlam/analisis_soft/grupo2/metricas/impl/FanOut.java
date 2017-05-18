@@ -1,13 +1,13 @@
-package metricas.impl;
+package ar.edu.unlam.analisis_soft.grupo2.metricas.impl;
 
 import java.util.List;
 
-import ayuda.Cadenas;
-import entidades.Clase;
-import entidades.Metodo;
-import entidades.Nombrable;
-import metricas.Metrica;
-import metricas.ResultadoMetrica;
+import ar.edu.unlam.analisis_soft.grupo2.ayuda.Cadenas;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Clase;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Metodo;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Nombrable;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.Metrica;
+import ar.edu.unlam.analisis_soft.grupo2.metricas.ResultadoMetrica;
 
 public class FanOut implements Metrica, Nombrable {
 

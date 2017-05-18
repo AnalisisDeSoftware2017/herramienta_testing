@@ -1,4 +1,4 @@
-package lector;
+package ar.edu.unlam.analisis_soft.grupo2.lector;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -13,8 +13,8 @@ import com.github.javaparser.ast.body.ConstructorDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.TypeDeclaration;
 
-import entidades.Clase;
-import entidades.Metodo;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Clase;
+import ar.edu.unlam.analisis_soft.grupo2.entidades.Metodo;
 
 public class LectorJavaParserAvanzado extends LectorProyecto {
 
@@ -31,7 +31,7 @@ public class LectorJavaParserAvanzado extends LectorProyecto {
         			
         			ClassOrInterfaceDeclaration claseOInterfaz = (ClassOrInterfaceDeclaration) tipo;
         			
-        			//Me aseguro que no sea una interfaz (no se pueden calcular todas las metricas)
+        			//Me aseguro que no sea una ar.edu.unlam.analisis_soft.grupo2.interfaz (no se pueden calcular todas las ar.edu.unlam.analisis_soft.grupo2.metricas)
         			if (! claseOInterfaz.isInterface() ){
         				
 	        			Clase clase = new Clase( claseOInterfaz.getName(), new ArrayList<Metodo>() );
@@ -61,7 +61,7 @@ public class LectorJavaParserAvanzado extends LectorProyecto {
             	
             	ClassOrInterfaceDeclaration internalClassOrInterface = (ClassOrInterfaceDeclaration) miembro;
             	
-            	//Me aseguro que no sea una interfaz (no se pueden calcular todas las metricas)
+            	//Me aseguro que no sea una ar.edu.unlam.analisis_soft.grupo2.interfaz (no se pueden calcular todas las ar.edu.unlam.analisis_soft.grupo2.metricas)
             	if (! internalClassOrInterface.isInterface()){
             		
             		ClassOrInterfaceDeclaration internalClass = internalClassOrInterface;
